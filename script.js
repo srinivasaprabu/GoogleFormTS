@@ -49,7 +49,8 @@ class FormBuilder {
             this.addField(field);
             fieldLabelInput.value = '';
             fieldOptionsInput.value = '';
-            errorMessageContainer.textContent = ''; // Clear any previous error messages
+            if (errorMessageContainer)
+                errorMessageContainer.textContent = ''; // Clear any previous error messages
         });
         submitFormButton.addEventListener('click', () => {
             if (this.validateForm()) {
@@ -123,11 +124,13 @@ class FormBuilder {
                     input.classList.add('error');
                 }
                 else {
-                    input.classList.remove('error');
+                    if (input && input.classList)
+                        input.classList.remove('error');
                 }
             }
             else {
-                input.classList.remove('error');
+                if (input && input.classList)
+                    input.classList.remove('error');
             }
         });
         return valid;

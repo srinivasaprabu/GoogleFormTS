@@ -70,6 +70,7 @@ class FormBuilder {
             this.addField(field);
             fieldLabelInput.value = '';
             fieldOptionsInput.value = '';
+            if(errorMessageContainer)
             errorMessageContainer.textContent = ''; // Clear any previous error messages
         });
 
@@ -151,9 +152,11 @@ class FormBuilder {
                     valid = false;
                     input.classList.add('error');
                 }else {
+                    if(input && input.classList)
                     input.classList.remove('error');
                 }
             } else {
+              if(input && input.classList)
                 input.classList.remove('error');
             }
         });
