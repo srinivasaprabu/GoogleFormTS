@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2015",         // Use ES2015 or later to support modern JavaScript features
+    "lib": ["dom", "es2015"],   // Include DOM and ES2015 features
+    "module": "esnext",          // Use ESNext module system
+    "moduleResolution": "node", // For resolving imports (useful for node-based environments)
+    "strict": true,              // Enables strict type-checking options
+    "esModuleInterop": true,     // Enables compatibility with CommonJS-style modules
+    "skipLibCheck": true,        // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "script.ts"  // Include your script.ts or other TypeScript files here
+  ]
+}

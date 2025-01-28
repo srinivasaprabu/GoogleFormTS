@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form Builder</h1>
+
+        <div id="form-creation">
+            <h2>Create a New Form</h2>
+            <div>
+                <label for="field-type">Select Field Type:</label>
+                <select id="field-type">
+                    <option value="text">Text Input</option>
+                    <option value="radio">Radio Buttons</option>
+                    <option value="checkbox">Checkboxes</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="field-label">Field Label:</label>
+                <input type="text" id="field-label" placeholder="Enter field label" />
+            </div>
+
+            <div id="field-options" class="hidden">
+                <label for="field-options-input">Options (comma separated):</label>
+                <input type="text" id="field-options-input" placeholder="Enter options" />
+            </div>
+
+            <button id="add-field">Add Field</button>
+        </div>
+
+        <div id="form-preview">
+            <h2>Form Preview</h2>
+            <form id="form">
+                <!-- Dynamic form fields will be added here -->
+            </form>
+            <button id="submit-form">Submit Form</button>
+        </div>
+
+        <div id="form-list">
+            <h2>Your Forms</h2>
+            <!-- Saved forms will be listed here -->
+        </div>
+
+        <div id="response-review">
+            <h2>Review Responses</h2>
+            <!-- Submitted form responses will appear here -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
